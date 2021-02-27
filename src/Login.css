@@ -1,0 +1,135 @@
+
+ /* #27282d: #27282d
+lighten(#27282d, 25%): lighten(#27282d, 25%)
+lighten(#27282d, 65%): lighten(#27282d, 65%)
+$gradient: linear-gradient(140deg, rgb(219, 98, 65) 0%, rgb(229, 91, 141) 100%) */
+
+/* body{
+  background: linear-gradient(to right, #642b73, #c6426e); 
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center
+} */
+body{
+  background: linear-gradient(to right, #642b73, #c6426e); 
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.App {
+  background:   #282c34;
+  height: 340px;
+  width: 520px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0px 4px 30px -5px rgba(0,0,0,0.65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container{
+  position: relative;
+  margin-bottom: 30px;
+  width: 340px;
+}
+input, button{
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 1.3px;
+}
+  
+input {
+  box-sizing: border-box;
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lighten(#be6161, 25%);
+  color: white;
+  padding: 12px 6px 12px 36px;
+  font-size: 19px;
+  outline: none;
+  caret-color: rgb(229, 91, 141);
+}
+  
+input:focus {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(140deg, rgb(219, 98, 65) 0%, rgb(229, 91, 141) 100%);
+  border-image-slice: 1;
+}
+
+input:focus + i{
+  color: lighten(#ffffff, 65%);
+}
+
+::placeholder{
+    color: lighten(#27282d, 65%);
+    opacity: .4;
+}
+
+/* i{
+  color: lighten(#ffffff, 25%);
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color .3s;
+} */
+/* button{
+  background: lighten( #27282d, 5%);
+  border: none;
+  border-radius: 30px ;
+  color: lighten(#27282d, 65%);
+  font-size: 16px;
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: all .3s;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  box-shadow: 0px 4px 15px -5px rgba(0,0,0,0.65);
+  transition: all .3s;
+}
+   */
+.Button_Login{
+  min-width: 120px;
+  min-height:50px;
+  background-color: #790e43;
+  color: #ccc;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+.Button_Login:hover {
+  background: lighten( #27282d, 10%);
+  box-shadow: 0px 5px 20px -3px rgba(0,0,0,0.65);
+}
+
+@media screen and (max-width: 620px) {
+  
+  .App{
+    min-height: 300px;
+    max-height: 420px;
+    width: 90vw;
+  }
+    
+  .input-container{
+    width: 80%;
+    margin-bottom: 40px;
+    color:white;
+  }
+    
+  button{
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+}
